@@ -1,0 +1,66 @@
+{
+    "hellin": {
+        "username": "hellin",
+        "proper_username": "Hellin",
+        "hashed_password": "f0950301938627cc68c4e655ce9e0521c29775b6128751e4ef11cf137cb42e30",
+        "salt": "BHTNGVDHUDISYBBPENUSRAXSFWBRCBJG",
+        "last_locked": 1695888318,
+        "failed_attempts": 0
+    },
+    "admin": {
+        "username": "admin",
+        "proper_username": "Admin",
+        "hashed_password": "92db603f87e846ddcb752442441fe08061ae65f4217dd348b32701a9519301bb",
+        "salt": "ZRQTBGXTGAESYVSMVICHLFWQNKNYJZXF",
+        "last_locked": 0,
+        "failed_attempts": 0
+    },
+    "milo": {
+        "username": "milo",
+        "proper_username": "Milo",
+        "hashed_password": "0c7a0a3edec670c7eab44e556eeaaa8de6e446144cc27e4d313041353551969c",
+        "salt": "RXLRQZYWPCPODOTGCMCGMCXRLIELDYLO",
+        "last_locked": 0,
+        "failed_attempts": 0
+    },
+    "kys": {
+        "username": "kys",
+        "proper_username": "kys",
+        "hashed_password": "0c0a92c292eb5efc95eac33fe2c86f32161cdd8cfc229986a50512946ae3094b",
+        "salt": "DTNGNIYEMRXNQMRYQTXUSZEZWELRQHWA",
+        "last_locked": 0,
+        "failed_attempts": 0
+    },
+    "retard": {
+        "username": "retard",
+        "proper_username": "retard",
+        "hashed_password": "5bdf8d333efc6ee5c0cd4175b4ce96a0d0ddddc11217c3a2e6b49b1851fd9c8c",
+        "salt": "AKQHIAHEHYEVIQWLCLKKLKZTPJPEGTEG",
+        "last_locked": 0,
+        "failed_attempts": 0
+    },
+    "fat_cunt_12": {
+        "username": "fat_cunt_12",
+        "proper_username": "fat_cunt_12",
+        "hashed_password": "9f1cbe9be88fbd768f64754e4939db67fce7d5a28c3f3ef2f67a5e7cb905c493",
+        "salt": "HFONGLMRSOLYNQZNDFVJKJMJMRCQTECM",
+        "last_locked": 0,
+        "failed_attempts": 2
+    },
+    "discord_mod_69": {
+        "username": "discord_mod_69",
+        "proper_username": "discord_mod_69",
+        "hashed_password": "3ac60e0f3670825c371cd416a93c59ade9a4299dede5f492f94d2ee0cdda0ad6",
+        "salt": "KFWYDLOMYNCMTCMEKIMYDAZFCDEJTGGO",
+        "last_locked": 0,
+        "failed_attempts": 0
+    },
+    "fat_loser_54": {
+        "username": "fat_loser_54",
+        "proper_username": "Fat_Loser_54",
+        "hashed_password": "a77ee14c79322063d8e71fb3c6ab1d500512ccb310f1e4509bfba5db62d61bc7",
+        "salt": "TONPQKUBXRDDZYLGYMLFWVBQXLDCXIFI",
+        "last_locked": 0,
+        "failed_attempts": 0
+    }
+}
