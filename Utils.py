@@ -30,10 +30,7 @@ Returns a nicely formatted version of the list as a string :)
 
 
 def formatStrList(strList):
-    text = ""
-
-    for x in strList:
-        text += x + ", "
+    text = ", ".join(strList)
 
     text = text[0:len(text) - 2] + "."
     return text

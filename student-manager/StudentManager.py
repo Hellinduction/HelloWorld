@@ -11,7 +11,9 @@ def get_choice():
     while not valid:
         try:
             choice = input("Menu choice (1-3): ")
-            assert choice.isdigit()
+            # Also apparently using .isdigit on a string doesn't account for negative numbers :/
+            assert choice.isdigit()  # Reminder for future to not use assert because it requires __debug__ to be true
+            # apparently :/
 
             choice = int(choice)
             assert 3 >= choice >= 1
