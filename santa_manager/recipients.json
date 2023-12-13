@@ -1,0 +1,14 @@
+{
+    "joe": {
+        "py/object": "__main__.Recipient",
+        "name": "JOE",
+        "is_nice": true,
+        "income": 50000
+    },
+    "hellin": {
+        "py/object": "__main__.Recipient",
+        "name": "Hellin",
+        "is_nice": false,
+        "income": 100000
+    }
+}

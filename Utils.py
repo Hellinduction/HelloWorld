@@ -32,7 +32,7 @@ Returns a nicely formatted version of the list as a string :)
 def formatStrList(strList):
     text = ", ".join(strList)
 
-    text = text[0:len(text) - 2] + "."
+    text = text[0:len(text)] + "."
     return text
 
 
