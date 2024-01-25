@@ -18,7 +18,6 @@ class Recipient:
     """
     Gets the number of presents/coal for this recipient
     """
-
     def calc_items(self):
         if not self.is_nice:
             return 2  # Every naughty recipient gets 2 coal
