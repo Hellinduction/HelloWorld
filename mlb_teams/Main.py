@@ -1,6 +1,5 @@
 import pandas as pd
 
-
 CSV_FILE_PATH: str = "mlb_teams_2012.csv"
 
 
@@ -11,7 +10,8 @@ def display_menu():
     print("2. View payroll leaderboard")
     print("3. Search for a team")
     print("4. View teams with payroll within specified range")
-    print("5. Exit")
+    print("5. View teams with wins within a specified range")
+    print("6. Exit")
 
 
 class Team:
@@ -69,6 +69,8 @@ def view_payroll_leaderboard(data, limit=10):
 """
 Probably bad because I am manipulating way more data than I need to
 """
+
+
 # def search_for_team(data):
 #     teams = data["Team"].tolist()
 #     team_name = input("Enter the name of the team you would like to search for: ").title()
@@ -112,17 +114,45 @@ def get_number(question, data_type=int):
     return i
 
 
+def range_search(data, lower_bound_question, upper_bound_question, bound_type, table_name):
+    lower_bound = get_number(lower_bound_question, bound_type)
+    upper_bound = get_number(upper_bound_question, bound_type)
+
+    new_data = data.where(
+        (data[table_name] >= lower_bound) & (data[table_name] <= upper_bound)).dropna().sort_values(
+        by=table_name, ascending=False)
+
+    if new_data.empty:
+        print("There were no teams found inbetween the range you specified.")
+        return None
+
+    teams = convert_to_teams(new_data)
+    return teams
+
+
 def payroll_range_search(data):
-    lower_bound = get_number("Enter the lower bound of the range (in millions) : $", float)
-    upper_bound = get_number("Enter the upper bound of the range (in millions): $", float)
+    teams = range_search(data,
+                         "Enter the lower bound of the range (in millions) : $",
+                         "Enter the upper bound of the range (in millions): $",
+                         float,
+                         "Payroll (millions)")
 
-    payroll_data = data.where((data["Payroll (millions)"] >= lower_bound) & (data["Payroll (millions)"] <= upper_bound)).dropna().sort_values(by="Payroll (millions)", ascending=False)
-
-    if payroll_data.empty:
-        print("There were no teams found inbetween the payrolls you specified.")
+    if teams is None:
         return
 
-    teams = convert_to_teams(payroll_data)
+    for team in teams:
+        print(f"{team.name} : ${team.payroll} million : {team.wins} wins")
+
+
+def win_range_search(data):
+    teams = range_search(data,
+                         "Enter the lower bound of the range for wins: ",
+                         "Enter the upper bound of the range for wins: ",
+                         int,
+                         "Wins")
+
+    if teams is None:
+        return
 
     for team in teams:
         print(f"{team.name} : ${team.payroll} million : {team.wins} wins")
@@ -133,7 +163,7 @@ def start():
 
     while True:
         display_menu()
-        choice = input("Choose a menu option (1-5): ")
+        choice = input("Choose a menu option (1-6): ")
 
         print()
 
@@ -151,6 +181,9 @@ def start():
                 payroll_range_search(data)
 
             case "5":
+                win_range_search(data)
+
+            case "6":
                 print("Thank you! exiting...")
                 return
 
