@@ -163,27 +163,27 @@ def start():
 
     while True:
         display_menu()
-        choice = input("Choose a menu option (1-6): ")
+        choice = get_number("Choose a menu option (1-6): ")
 
         print()
 
         match choice:
-            case "1":
+            case 1:
                 view_teams(data)
 
-            case "2":
+            case 2:
                 view_payroll_leaderboard(data)
 
-            case "3":
+            case 3:
                 search_for_team(data)
 
-            case "4":
+            case 4:
                 payroll_range_search(data)
 
-            case "5":
+            case 5:
                 win_range_search(data)
 
-            case "6":
+            case 6:
                 print("Thank you! exiting...")
                 return
 
