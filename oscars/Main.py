@@ -40,7 +40,7 @@ def display_each_year_by_gender(data: pandas.core.frame.DataFrame):
 
 def range_search(data: pandas.core.frame.DataFrame):
     lower = get_number("Enter the lower year: ")
-    upper = get_number("Enter the higher year: ")
+    upper = get_number("Enter the higher year: ", lower_bound=lower)
     sex = get_sex()
 
     new_data = data.where(
@@ -92,12 +92,12 @@ def display_menu():
         print(f"{i}. {list(MENU.keys())[i - 1]}")
 
 
-def get_number(question, data_type=int, upper_bound=-1, lower_bound=-1):
+def get_number(question, data_type=int, upper_bound=-1, lower_bound=1):
     while True:
         try:
             i = data_type(input(question))
 
-            if i <= 0 or (lower_bound != -1 and i < lower_bound):
+            if lower_bound != -1 and i < lower_bound:
                 raise ValueError("Provided value was too low")
 
             if upper_bound != -1 and i > upper_bound:

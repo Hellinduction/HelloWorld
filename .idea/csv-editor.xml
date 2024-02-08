@@ -3,13 +3,6 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
-        <entry key="C:\Users\647548\Downloads\oscar_winners.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
         <entry key="\biostats\biostats.csv">
           <value>
             <Attribute>
@@ -18,6 +11,13 @@
           </value>
         </entry>
         <entry key="\mlb_teams\mlb_teams_2012.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\oscars\oscar_winners.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
